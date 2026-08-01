@@ -1,0 +1,81 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+html.dark {
+  color-scheme: dark;
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #3B82F6 transparent;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #3B82F6;
+  border-radius: 999px;
+}
+
+body {
+  @apply bg-surface text-ink font-body antialiased dark:bg-[#0B1220] dark:text-slate-100;
+  transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+/* visible keyboard focus */
+a:focus-visible,
+button:focus-visible,
+[tabindex]:focus-visible {
+  outline: 2px solid #3B82F6;
+  outline-offset: 3px;
+  border-radius: 8px;
+}
+
+@layer components {
+  .section-container {
+    @apply max-w-6xl mx-auto px-6 sm:px-8 lg:px-10;
+  }
+
+  .section-eyebrow {
+    @apply text-xs sm:text-sm tracking-[0.25em] uppercase font-semibold text-secondary dark:text-accent;
+  }
+
+  .section-title {
+    @apply font-display font-bold text-3xl sm:text-4xl text-ink dark:text-white mt-2;
+  }
+
+  .glass-card {
+    @apply bg-white/70 dark:bg-white/[0.04] backdrop-blur-md border border-white/60 dark:border-white/10 rounded-card shadow-soft;
+  }
+}
+
+/* Custom cursor (desktop only, toggled via JS) */
+.custom-cursor-active,
+.custom-cursor-active * {
+  cursor: none !important;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}

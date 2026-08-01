@@ -1,0 +1,16 @@
+{
+  "name": "Azhar Ridho Rahmatillah — Software Engineer",
+  "short_name": "Azhar Ridho",
+  "description": "Portfolio & resume of Azhar Ridho Rahmatillah, Informatics Undergraduate Student and Software Engineering Enthusiast.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#F8FAFC",
+  "theme_color": "#1E3A8A",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}
