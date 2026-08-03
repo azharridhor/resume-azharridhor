@@ -18,7 +18,9 @@ function loadImageDataUrl(imageUrl) {
   })
 }
 
-export async function downloadResumePDF(imageUrl = '/cv-image.png', filename = 'Resume_Azhar_Ridho_Rahmatillah.pdf') {
+const assetBase = import.meta.env.BASE_URL || '/'
+
+export async function downloadResumePDF(imageUrl = `${assetBase}cv-image.png`, filename = 'Resume_Azhar_Ridho_Rahmatillah.pdf') {
   try {
     const imgData = await loadImageDataUrl(imageUrl)
     const pdf = new jsPDF({ orientation: 'portrait', unit: 'mm', format: 'a4' })

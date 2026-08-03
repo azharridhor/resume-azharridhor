@@ -34,15 +34,17 @@ import {
   MdOutlineSchema,
 } from 'react-icons/md'
 
+const assetBase = import.meta.env.BASE_URL || '/'
+
 export const profile = {
   name: 'Azhar Ridho Rahmatillah',
   initials: 'AR',
   role: ['Informatics Undergraduate Student', 'Software Engineering Enthusiast'],
   tagline:
     'Saya adalah mahasiswa Informatika yang memiliki minat pada Software Engineering, Web Development, dan Mobile Development menggunakan Flutter.',
-  resumeUrl: '/Resume_Azhar_Ridho_Rahmatillah.pdf',
-  resumeImageUrl: '/cv-image.png',
-  photo: '/profile-photo.png',
+  resumeUrl: `${assetBase}Resume_Azhar_Ridho_Rahmatillah.pdf`,
+  resumeImageUrl: `${assetBase}cv-image.png`,
+  photo: `${assetBase}profile-photo.png`,
   contact: {
     phone: '082116208929',
     email: 'azharridhor@gmail.com',
